@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="spz"
+           fetch="https://github.com/spezi77/" />
+  <remote  name="ev"
+           fetch="git://github.com/Evervolv/" />	 
+  <remote  name="cm"
+           fetch="git://github.com/CyanogenMod/" />
+
+<!-- Remove projects -->
+  <remove-project name="SlimRoms/android_external_flac" />
+  <remove-project name="SlimRoms/frameworks_base" />
+  <remove-project name="SlimRoms/frameworks_native" />
+  <remove-project name="SlimRoms/frameworks_opt_telephony" />
+  <remove-project name="platform/system/security" />
+  <remove-project name="platform/external/tremolo" />
+  <remove-project name="SlimRoms/hardware_qcom_gps" />
+  <remove-project name="SlimRoms/hardware_ril" />
+  <remove-project name="SlimRoms/packages_apps_Camera2" />
+  <remove-project name="SlimRoms/vendor_slim" />
+
+  <!-- Forked Slimkat projects with required changes for htc bravo -->
+  <project path="frameworks/base" name="android_frameworks_base" remote="spz" revision="slimkat-new" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="spz" revision="slimkat-new" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="spz" revision="slimkat-new" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="spz" revision="slimkat-new" />
+  <project path="vendor/slim" name="vendor_slim" remote="spz" revision="slimkat-new" />
+
+  <!-- Kernel and device-trees for htc bravo (Thanks Evervolv) -->
+  <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="kitkat-ls" /> 
+  <project path="device/htc/bravo" name="android_device_htc_bravo" remote="spz" revision="slimkat-new" />
+  <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="spz" revision="slimkat-new" />
+  <project path="vendor/htc" name="android_vendor_htc" remote="spz" revision="kitkat" />
+
+  <!-- Required for enabling A2SD scripts -->
+  <project path="external/bash" name="android_external_bash" remote="cm" revision="cm-11.0" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="cm" revision="cm-11.0" />
+
+  <!-- Required hardware and camera legacy projects from Evervolv  -->
+  <project path="hardware/qcom/audio-legacy" name="android_hardware_qcom_audio-legacy" remote="ev" revision="kitkat" />
+  <project path="hardware/qcom/display-legacy" name="android_hardware_qcom_display-legacy" remote="ev" revision="kitkat" />
+  <project path="hardware/qcom/gps-legacy" name="android_hardware_qcom_gps-legacy" remote="ev" revision="kitkat" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="ev" revision="kitkat" />
+
+  <!-- Security patches by Google / Stagefright 2.0 patches -->
+  <project path="system/security" name="android_system_security" remote="spz" revision="cm-11.0" />
+  <project path="external/flac" name="android_external_flac" remote="spz" revision="cm-11.0" />
+  <project path="external/tremolo" name="android_external_tremolo" remote="spz" revision="master" />
+
+</manifest>
