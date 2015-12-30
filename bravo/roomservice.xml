@@ -17,6 +17,7 @@
   <remove-project name="platform/external/tremolo" />
   <remove-project name="SlimRoms/hardware_qcom_gps" />
   <remove-project name="SlimRoms/hardware_ril" />
+  <remove-project name="SlimRoms/android_libcore" />
   <remove-project name="SlimRoms/packages_apps_Camera2" />
   <remove-project name="SlimRoms/android_system_core" />
   <remove-project name="platform/system/security" />
@@ -51,7 +52,6 @@
   <project path="external/tremolo" name="android_external_tremolo" remote="spz" revision="master" />
   <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
   <project path="frameworks/av" name="android_frameworks_av" remote="spz" revision="slimkat-new" />
-  <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
   <project path="system/core" name="android_system_core" remote="spz" revision="slimkat-new" />
 
 </manifest>
