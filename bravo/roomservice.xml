@@ -19,6 +19,7 @@
   <remove-project name="SlimRoms/hardware_ril" />
   <remove-project name="SlimRoms/android_libcore" />
   <remove-project name="SlimRoms/packages_apps_Camera2" />
+  <remove-project name="SlimRoms/packages_apps_Settings" />
   <remove-project name="SlimRoms/android_system_core" />
   <remove-project name="platform/system/security" />
   <remove-project name="SlimRoms/vendor_slim" />
@@ -29,6 +30,9 @@
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="spz" revision="slimkat-new" />
   <project path="hardware/ril" name="android_hardware_ril" remote="spz" revision="slimkat-new" />
   <project path="vendor/slim" name="vendor_slim" remote="spz" revision="slimkat-new" />
+
+  <!-- Settings with option for Lockscreen Notifications -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="spz" revision="slimkat-new" />
 
   <!-- Kernel and device-trees for htc bravo (Thanks Evervolv) -->
   <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="kitkat-ls" /> 
