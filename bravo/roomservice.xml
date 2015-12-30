@@ -47,5 +47,7 @@
   <project path="system/security" name="android_system_security" remote="spz" revision="cm-11.0" />
   <project path="external/flac" name="android_external_flac" remote="spz" revision="cm-11.0" />
   <project path="external/tremolo" name="android_external_tremolo" remote="spz" revision="master" />
+<project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
+
 
 </manifest>
