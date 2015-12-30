@@ -8,18 +8,20 @@
   <remote  name="cm"
            fetch="git://github.com/CyanogenMod/" />
 
-<!-- Remove projects -->
+  <!-- Remove projects -->
   <remove-project name="SlimRoms/android_external_flac" />
+  <remove-project name="SlimRoms/frameworks_av" />
   <remove-project name="SlimRoms/frameworks_base" />
   <remove-project name="SlimRoms/frameworks_native" />
   <remove-project name="SlimRoms/frameworks_opt_telephony" />
-  <remove-project name="platform/system/security" />
   <remove-project name="platform/external/tremolo" />
   <remove-project name="SlimRoms/hardware_qcom_gps" />
   <remove-project name="SlimRoms/hardware_ril" />
   <remove-project name="SlimRoms/packages_apps_Camera2" />
+  <remove-project name="SlimRoms/android_system_core" />
+  <remove-project name="platform/system/security" />
   <remove-project name="SlimRoms/vendor_slim" />
-
+ 
   <!-- Forked Slimkat projects with required changes for htc bravo -->
   <project path="frameworks/base" name="android_frameworks_base" remote="spz" revision="slimkat-new" />
   <project path="frameworks/native" name="android_frameworks_native" remote="spz" revision="slimkat-new" />
@@ -47,7 +49,9 @@
   <project path="system/security" name="android_system_security" remote="spz" revision="cm-11.0" />
   <project path="external/flac" name="android_external_flac" remote="spz" revision="cm-11.0" />
   <project path="external/tremolo" name="android_external_tremolo" remote="spz" revision="master" />
-<project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
-
+  <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="spz" revision="slimkat-new" />
+  <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
+  <project path="system/core" name="android_system_core" remote="spz" revision="slimkat-new" />
 
 </manifest>
