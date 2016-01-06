@@ -9,6 +9,7 @@
            fetch="git://github.com/CyanogenMod/" />
 
   <!-- Remove projects -->
+  <remove-project name="SlimRoms/android_external_bluetooth_bluedroid" />
   <remove-project name="SlimRoms/android_external_flac" />
   <remove-project name="SlimRoms/frameworks_av" />
   <remove-project name="SlimRoms/frameworks_base" />
@@ -51,11 +52,12 @@
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="ev" revision="kitkat" />
 
   <!-- Security patches by Google / Stagefright 2.0 patches -->
-  <project path="system/security" name="android_system_security" remote="spz" revision="cm-11.0" />
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="spz" revision="slimkat-new" />
   <project path="external/flac" name="android_external_flac" remote="spz" revision="cm-11.0" />
   <project path="external/tremolo" name="android_external_tremolo" remote="spz" revision="master" />
-  <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
   <project path="frameworks/av" name="android_frameworks_av" remote="spz" revision="slimkat-new" />
+  <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
   <project path="system/core" name="android_system_core" remote="spz" revision="slimkat-new" />
+  <project path="system/security" name="android_system_security" remote="spz" revision="cm-11.0" />
 
 </manifest>
