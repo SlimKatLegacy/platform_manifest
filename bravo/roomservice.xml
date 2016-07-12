@@ -19,6 +19,8 @@
   <remove-project name="SlimRoms/frameworks_native" />
   <remove-project name="SlimRoms/frameworks_opt_telephony" />
   <remove-project name="platform/external/tremolo" />
+  <remove-project name="SlimRoms/android_external_aac" />
+  <remove-project name="SlimRoms/android_external_skia" />
   <remove-project name="SlimRoms/hardware_qcom_gps" />
   <remove-project name="SlimRoms/hardware_ril" />
   <remove-project name="SlimRoms/android_libcore" />
@@ -38,14 +40,16 @@
 
   <!-- Security updates -->
   <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
+  <project path="external/aac" name="android_external_aac" remote="android-security" revision="aosp-4.4" />
   <project path="external/libvpx" name="android_external_libvpx" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/sonivox" name="android_external_sonivox" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/skia" name="android_external_skia" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/sqlite" name="android_external_sqlite" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/tremolo" name="android_external_tremolo" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="system/security" name="android_system_security" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/openssl" name="android_external_openssl" remote="cm" revision="cm-11.0" groups="pdk" />
-  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="cm" revision="cm-11.0" />
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="spz" revision="kk4.4-caf" />
+  <project path="external/openssl" name="android_external_openssl" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="android-security" revision="aosp-4.4" />
 
   <!-- Forked Slimkat projects with required changes for htc bravo -->
   <project path="build" name="android_build" remote="spz" revision="slimkat-new" >
