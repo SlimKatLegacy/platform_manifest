@@ -7,8 +7,6 @@
            fetch="git://github.com/Evervolv/" />	 
   <remote  name="cm"
            fetch="git://github.com/CyanogenMod/" />
-  <remote  name="android-security"
-           fetch="https://github.com/android-security/" />
 
   <!-- Remove projects -->
   <remove-project name="SlimRoms/android_external_bluetooth_bluedroid" />
@@ -18,46 +16,35 @@
   <remove-project name="SlimRoms/frameworks_base" />
   <remove-project name="SlimRoms/frameworks_native" />
   <remove-project name="SlimRoms/frameworks_opt_telephony" />
-  <remove-project name="platform/external/tremolo" />
-  <remove-project name="SlimRoms/android_external_aac" />
-  <remove-project name="SlimRoms/android_external_skia" />
   <remove-project name="SlimRoms/hardware_qcom_gps" />
   <remove-project name="SlimRoms/hardware_ril" />
   <remove-project name="SlimRoms/android_libcore" />
   <remove-project name="SlimRoms/packages_apps_Camera2" />
   <remove-project name="SlimRoms/packages_apps_Settings" />
   <remove-project name="SlimRoms/android_system_core" />
-  <remove-project name="platform/system/security" />
   <remove-project name="SlimRoms/vendor_slim" />
-  <remove-project name="SlimRoms/android_external_chromium_org_third_party_openssl" />
-  <remove-project name="SlimRoms/android_external_chromium_org" />
-  <remove-project name="SlimRoms/android_external_openssl" />
   <remove-project name="SlimRoms/android_external_busybox" />
-  <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
-  <remove-project name="SlimRoms/packages_apps_UnifiedEmail" />
-  <remove-project name="SlimRoms/android_art" />
   <remove-project name="SlimRoms/android_dalvik" />
-  <remove-project name="platform/external/bouncycastle" />
-  <remove-project name="platform/external/libvpx" />
-  <remove-project name="platform/external/sonivox" />
-  <remove-project name="platform/external/sqlite" />
-
-  <!-- Security updates -->
-  <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
-  <project path="external/aac" name="android_external_aac" remote="android-security" revision="aosp-4.4" />
-  <project path="external/libvpx" name="android_external_libvpx" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/sonivox" name="android_external_sonivox" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/skia" name="android_external_skia" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/sqlite" name="android_external_sqlite" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/tremolo" name="android_external_tremolo" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="system/security" name="android_system_security" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/openssl" name="android_external_openssl" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="external/chromium_org" name="android_external_chromium_org" remote="android-security" revision="aosp-4.4" groups="pdk" />
-  <project path="packages/apps/UnifiedEmail" name="android_packages_apps_UnifiedEmail" remote="android-security" revision="aosp-4.4" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="android-security" revision="aosp-4.4" />
-  <project path="art" name="android_art" remote="android-security" revision="aosp-4.4" />
-  <project path="dalvik" name="android_dalvik" remote="android-security" revision="aosp-4.4" />
+  <remove-project name="platform/external/dnsmasq" />
+  <remove-project name="platform/external/chromium" />
+  <remove-project name="platform/external/elfutils" />
+  <remove-project name="platform/external/embunit" />
+  <remove-project name="platform/external/freetype" />
+  <remove-project name="platform/external/iputils" />
+  <remove-project name="platform/external/linux-tools-perf" />
+  <remove-project name="SlimRoms/android_external_llvm" />
+  <remove-project name="platform/external/openssh" />
+  <remove-project name="platform/external/stlport" />
+  <remove-project name="platform/external/tcpdump" />
+  <remove-project name="platform/external/v8" />
+  <remove-project name="platform/frameworks/compile/slang" />
+  <remove-project name="platform/frameworks/opt/net/voip" />
+  <remove-project name="platform/frameworks/wilhelm" />
+  <remove-project name="SlimRoms/android_bionic" />
+  <remove-project name="SlimRoms/android_external_e2fsprogs" />
+  <remove-project name="SlimRoms/android_external_clang" />
+  <remove-project name="SlimRoms/frameworks_ex" />
+  <remove-project name="SlimRoms/frameworks_rs" />
 
   <!-- Forked Slimkat projects with required changes for htc bravo -->
   <project path="build" name="android_build" remote="spz" revision="slimkat-new" >
@@ -98,5 +85,27 @@
   <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
   <project path="system/core" name="android_system_core" remote="spz" revision="slimkat-new" />
 
+  <!-- Compiler optimizations and fixes for strict-aliasing -->
+  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="spz" revision="ls-kitkat" />
+  <project path="external/chromium" name="android_external_chromium" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/elfutils" name="android_external_elfutils" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/embunit" name="android_external_embunit" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/freetype" name="android_external_freetype" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/iputils" name="android_external_iputils" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/linux-tools-perf" name="android_external_linux-tools-perf" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/llvm" name="android_external_llvm" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/openssh" name="android_external_openssh" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/stlport" name="android_external_stlport" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/tcpdump" name="android_external_tcpdump" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="external/v8" name="android_external_v8" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="frameworks/compile/slang" name="android_frameworks_compile_slang" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="frameworks/opt/net/voip" name="android_frameworks_opt_net_voip" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="frameworks/wilhelm" name="android_frameworks_wilhelm" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="bionic" name="android_bionic" remote="spz" revision="slimkat-new" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="spz" revision="ls-kitkat" />
+  <project path="dalvik" name="android_dalvik" remote="spz" revision="ls-kitkat"  />
+  <project path="external/clang" name="android_external_clang" remote="spz" revision="ls-kitkat" />
+  <project path="frameworks/ex" name="android_frameworks_ex" remote="spz" revision="ls-kitkat" />
+  <project path="frameworks/rs" name="android_frameworks_rs" remote="spz" revision="ls-kitkat" />
 </manifest>
 
