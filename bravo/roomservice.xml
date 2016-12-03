@@ -73,6 +73,7 @@
   <remove-project name="SlimRoms/packages_providers_TelephonyProvider" />
   <remove-project name="SlimRoms/packages_providers_DownloadProvider" />
   <remove-project name="SlimRoms/android_system_media" />
+  <remove-project name="SlimRoms/packages_apps_DashClock" />
 
   <!-- Security updates -->
   <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
@@ -163,5 +164,10 @@
   <project path="external/clang" name="android_external_clang" remote="spz" revision="ls-kitkat" />
   <project path="frameworks/ex" name="android_frameworks_ex" remote="spz" revision="ls-kitkat" />
   <project path="frameworks/rs" name="android_frameworks_rs" remote="spz" revision="ls-kitkat" />
+
+  <!-- Use LockClock instead of Dashclock -->
+  <project path="packages/apps/LockClock" name="android_packages_apps_LockClock" remote="spz" revision="slimkat-new" />
+  <project path="external/google" name="android_external_google" remote="cm" revision="cm-11.0" />
+  
 </manifest>
 
