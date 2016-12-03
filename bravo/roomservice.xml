@@ -7,6 +7,8 @@
            fetch="git://github.com/Evervolv/" />	 
   <remote  name="cm"
            fetch="git://github.com/CyanogenMod/" />
+  <remote  name="android-security"
+           fetch="https://github.com/android-security/" />
 
   <!-- Remove projects -->
   <remove-project name="SlimRoms/android_external_bluetooth_bluedroid" />
@@ -45,6 +47,60 @@
   <remove-project name="SlimRoms/android_external_clang" />
   <remove-project name="SlimRoms/frameworks_ex" />
   <remove-project name="SlimRoms/frameworks_rs" />
+  <remove-project name="platform/system/security" />
+  <remove-project name="SlimRoms/android_external_wpa_supplicant_8" />
+  <remove-project name="SlimRoms/packages_apps_UnifiedEmail" />
+  <remove-project name="SlimRoms/packages_apps_Email" />
+  <remove-project name="SlimRoms/android_art" />
+  <remove-project name="platform/external/bouncycastle" />
+  <remove-project name="platform/external/libvpx" />
+  <remove-project name="platform/external/jhead" />
+  <remove-project name="platform/external/sonivox" />
+  <remove-project name="platform/external/sqlite" />
+  <remove-project name="SlimRoms/android_external_jpeg" />
+  <remove-project name="platform/external/expat" />
+  <remove-project name="platform/external/dhcpcd" />
+  <remove-project name="platform/external/okhttp" />
+  <remove-project name="SlimRoms/android_external_chromium_org_third_party_openssl" />
+  <remove-project name="SlimRoms/android_external_chromium_org" />
+  <remove-project name="SlimRoms/android_external_openssl" />
+  <remove-project name="SlimRoms/android_external_aac" />
+  <remove-project name="platform/external/tremolo" />
+  <remove-project name="SlimRoms/android_external_skia" />
+  <remove-project name="SlimRoms/android_external_sepolicy" />
+  <remove-project name="SlimRoms/packages_apps_Bluetooth" />
+  <remove-project name="SlimRoms/packages_services_Telephony" />
+  <remove-project name="SlimRoms/packages_providers_TelephonyProvider" />
+  <remove-project name="SlimRoms/packages_providers_DownloadProvider" />
+  <remove-project name="SlimRoms/android_system_media" />
+
+  <!-- Security updates -->
+  <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
+  <project path="external/libvpx" name="android_external_libvpx" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/jhead" name="android_external_jhead" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/sonivox" name="android_external_sonivox" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/sqlite" name="android_external_sqlite" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="system/security" name="android_system_security" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/aac" name="android_external_aac" remote="android-security" revision="aosp-4.4" />
+  <project path="external/tremolo" name="android_external_tremolo" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="android-security" revision="aosp-4.4" />
+  <project path="art" name="android_art" remote="android-security" revision="aosp-4.4" />
+  <project path="system/media" name="android_system_media" remote="spz" revision="slimkat-new" />
+  <project path="external/sepolicy" name="android_external_sepolicy" remote="spz" revision="slimkat-new" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="spz" revision="slimkat-new" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="spz" revision="slimkat-new" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="spz" revision="slimkat-new" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="spz" revision="slimkat-new" />
+  <project path="packages/apps/UnifiedEmail" name="packages_apps_UnifiedEmail" remote="spz" revision="slimkat-new" />
+  <project path="packages/apps/Email" name="packages_apps_Email" remote="spz" revision="slimkat-new" />
+  <project path="external/skia" name="android_external_skia" remote="spz" revision="slimkat-new" groups="pdk" />
+  <project path="external/jpeg" name="android_external_jpeg" remote="spz" revision="slimkat-new" />
+  <project path="external/chromium_org" name="android_external_chromium_org" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="cm" revision="cm-11.0" groups="pdk" />
+  <project path="external/openssl" name="android_external_openssl" remote="spz" revision="slimkat-new" groups="pdk" />
+  <project path="external/expat" name="android_external_expat" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/dhcpcd" name="android_external_dhcpcd" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="external/okhttp" name="android_external_okhttp" remote="android-security" revision="aosp-4.4" groups="pdk" />
 
   <!-- Forked Slimkat projects with required changes for htc bravo -->
   <project path="build" name="android_build" remote="spz" revision="slimkat-new" >
