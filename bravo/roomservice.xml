@@ -74,6 +74,7 @@
   <remove-project name="SlimRoms/packages_providers_DownloadProvider" />
   <remove-project name="SlimRoms/android_system_media" />
   <remove-project name="SlimRoms/packages_apps_DashClock" />
+  <remove-project name="SlimRoms/packages_apps_Gallery2" />
 
   <!-- Security updates -->
   <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
