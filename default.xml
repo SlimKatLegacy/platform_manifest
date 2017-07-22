@@ -486,4 +486,7 @@
   <project path="external/ant-wireless/ant_service" name="CyanogenMod/android_external_ant-wireless_ant_service" remote="github" revision="cm-11.0" />
   <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github" revision="cm-11.0" />
 
+  <!-- HTC BRAVO roomservice -->
+  <include name="bravo/roomservice.xml"/>
+
 </manifest>
