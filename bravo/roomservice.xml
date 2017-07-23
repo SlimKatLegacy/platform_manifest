@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="skl"
+           fetch="https://github.com/SlimKatLegacy/" />
   <remote  name="spz"
            fetch="https://github.com/spezi77/" />
   <remote  name="ev"
            fetch="git://github.com/Evervolv/" />	 
-  <remote  name="cm"
-           fetch="git://github.com/CyanogenMod/" />
   <remote  name="android-security"
            fetch="https://github.com/android-security/" />
+  <remote  name="gh"
+           fetch="https://github.com/" />
 
   <!-- Remove projects -->
   <remove-project name="SlimRoms/android_external_bluetooth_bluedroid" />
@@ -75,8 +77,11 @@
   <remove-project name="SlimRoms/android_system_media" />
   <remove-project name="SlimRoms/packages_apps_DashClock" />
   <remove-project name="SlimRoms/packages_apps_Gallery2" />
+  <remove-project name="platform/packages/apps/CertInstaller" />
+  <remove-project name="SlimRoms/android_external_icu4c" />
+  <remove-project name="SlimRoms/packages_apps_ContactsCommon" />
 
-  <!-- Security updates -->
+  <!-- Security updates from android-security -->
   <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" revision="aosp-4.4" />
   <project path="external/libvpx" name="android_external_libvpx" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/jhead" name="android_external_jhead" remote="android-security" revision="aosp-4.4" groups="pdk" />
@@ -87,48 +92,60 @@
   <project path="external/tremolo" name="android_external_tremolo" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="android-security" revision="aosp-4.4" />
   <project path="art" name="android_art" remote="android-security" revision="aosp-4.4" />
-  <project path="system/media" name="android_system_media" remote="spz" revision="slimkat-new" />
-  <project path="external/sepolicy" name="android_external_sepolicy" remote="spz" revision="slimkat-new" />
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="spz" revision="slimkat-new" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="spz" revision="slimkat-new" />
-  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="spz" revision="slimkat-new" />
-  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="spz" revision="slimkat-new" />
-  <project path="packages/apps/UnifiedEmail" name="packages_apps_UnifiedEmail" remote="spz" revision="slimkat-new" />
-  <project path="packages/apps/Email" name="packages_apps_Email" remote="spz" revision="slimkat-new" />
-  <project path="external/skia" name="android_external_skia" remote="spz" revision="slimkat-new" groups="pdk" />
-  <project path="external/jpeg" name="android_external_jpeg" remote="spz" revision="slimkat-new" />
-  <project path="external/chromium_org" name="android_external_chromium_org" remote="cm" revision="cm-11.0" groups="pdk" />
-  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="cm" revision="cm-11.0" groups="pdk" />
-  <project path="external/openssl" name="android_external_openssl" remote="spz" revision="slimkat-new" groups="pdk" />
   <project path="external/expat" name="android_external_expat" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/dhcpcd" name="android_external_dhcpcd" remote="android-security" revision="aosp-4.4" groups="pdk" />
   <project path="external/okhttp" name="android_external_okhttp" remote="android-security" revision="aosp-4.4" groups="pdk" />
+  <project path="packages/apps/CertInstaller" name="android_packages_apps_CertInstaller" remote="android-security" revision="aosp-4.4" />
+
+  <!-- More Security updates -->
+  <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" remote="skl" revision="slimkat-new" />
+  <project path="external/icu4c" name="android_external_icu4c" remote="skl" revision="slimkat-new" />
+  <project path="system/media" name="android_system_media" remote="skl" revision="slimkat-new" />
+  <project path="external/sepolicy" name="android_external_sepolicy" remote="skl" revision="slimkat-new" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="skl" revision="slimkat-new" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="skl" revision="slimkat-new" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="skl" revision="slimkat-new" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="skl" revision="slimkat-new" />
+  <project path="packages/apps/UnifiedEmail" name="packages_apps_UnifiedEmail" remote="skl" revision="slimkat-new" />
+  <project path="packages/apps/Email" name="packages_apps_Email" remote="skl" revision="slimkat-new" />
+  <project path="external/skia" name="android_external_skia" remote="skl" revision="slimkat-new" groups="pdk" />
+  <project path="external/jpeg" name="android_external_jpeg" remote="skl" revision="slimkat-new" />
+  <project path="external/chromium_org" name="android_external_chromium_org" remote="skl" revision="slimkat-new" groups="pdk" />
+  <project path="external/chromium_org/third_party/openssl" name="android_external_chromium_org_third_party_openssl" remote="skl" revision="slimkat-new" groups="pdk" />
+  <project path="external/openssl" name="android_external_openssl" remote="skl" revision="slimkat-new" groups="pdk" />
+
+  <!-- Security & Stagefright 2.0 patches -->
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="skl" revision="slimkat-new" />
+  <project path="external/flac" name="android_external_flac" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/av" name="frameworks_av" remote="skl" revision="slimkat-new" />
+  <project path="libcore" name="android_libcore" remote="skl" revision="slimkat-new" />
+  <project path="system/core" name="android_system_core" remote="skl" revision="slimkat-new" />
 
   <!-- Forked Slimkat projects with required changes for htc bravo -->
-  <project path="build" name="android_build" remote="spz" revision="slimkat-new" >
+  <project path="build" name="android_build" remote="skl" revision="slimkat-new" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="frameworks/base" name="android_frameworks_base" remote="spz" revision="slimkat-new" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="spz" revision="slimkat-new" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="spz" revision="slimkat-new" />
-  <project path="hardware/ril" name="android_hardware_ril" remote="spz" revision="slimkat-new" />
-  <project path="vendor/slim" name="vendor_slim" remote="spz" revision="slimkat-new" />
+  <project path="frameworks/base" name="frameworks_base" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/native" name="frameworks_native" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="skl" revision="slimkat-new" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="skl" revision="slimkat-new" />
+  <project path="vendor/slim" name="vendor_slim" remote="skl" revision="slimkat-new" />
 
   <!-- Settings with option for Lockscreen Notifications -->
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="spz" revision="slimkat-new" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="skl" revision="slimkat-new" />
 
   <!-- Switch to newer busybox version -->
-  <project path="external/busybox" name="android_external_busybox" remote="spz" revision="slimkat-new" />
+  <project path="external/busybox" name="android_external_busybox" remote="skl" revision="slimkat-new" />
 
   <!-- Kernel and device-trees for htc bravo (Thanks Evervolv) -->
-  <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="kitkat-ls" /> 
-  <project path="device/htc/bravo" name="android_device_htc_bravo" remote="spz" revision="slimkat-new" />
-  <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="spz" revision="slimkat-new" />
-  <project path="vendor/htc" name="android_vendor_htc" remote="spz" revision="kitkat" />
+  <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="skl" revision="slimkat-new" /> 
+  <project path="device/htc/bravo" name="android_device_htc_bravo" remote="skl" revision="slimkat-new" />
+  <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="skl" revision="slimkat-new" />
+  <project path="vendor/htc" name="android_vendor_htc" remote="skl" revision="slimkat-new" />
 
   <!-- Required for enabling A2SD scripts -->
-  <project path="external/bash" name="android_external_bash" remote="cm" revision="cm-11.0" />
-  <project path="external/libncurses" name="android_external_libncurses" remote="cm" revision="cm-11.0" />
+  <project path="external/bash" name="android_external_bash" remote="skl" revision="slimkat-new" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="skl" revision="slimkat-new" />
 
   <!-- Required hardware and camera legacy projects from Evervolv  -->
   <project path="hardware/qcom/audio-legacy" name="android_hardware_qcom_audio-legacy" remote="ev" revision="kitkat" />
@@ -136,16 +153,16 @@
   <project path="hardware/qcom/gps-legacy" name="android_hardware_qcom_gps-legacy" remote="ev" revision="kitkat" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="ev" revision="kitkat" />
 
-  <!-- Security patches by Google / Stagefright 2.0 patches -->
-  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="spz" revision="slimkat-new" />
-  <project path="external/flac" name="android_external_flac" remote="spz" revision="cm-11.0" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="spz" revision="slimkat-new" />
-  <project path="libcore" name="android_libcore" remote="spz" revision="slimkat-new" />
-  <project path="system/core" name="android_system_core" remote="spz" revision="slimkat-new" />
-
   <!-- Compiler optimizations and fixes for strict-aliasing -->
-  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="spz" revision="ls-kitkat" />
-  <project path="external/chromium" name="android_external_chromium" remote="spz" revision="linaro_android_4.4.4" />
+  <project path="dalvik" name="android_dalvik" remote="skl" revision="slimkat-new"  />
+  <project path="bionic" name="android_bionic" remote="skl" revision="slimkat-new" />
+  <project path="external/clang" name="android_external_clang" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/ex" name="android_frameworks_ex" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/rs" name="android_frameworks_rs" remote="skl" revision="slimkat-new" />
+  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="skl" revision="slimkat-new" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="skl" revision="slimkat-new" />
+  <project path="external/chromium" name="android_external_chromium" remote="skl" revision="slimkat-new" />
+
   <project path="external/elfutils" name="android_external_elfutils" remote="spz" revision="linaro_android_4.4.4" />
   <project path="external/embunit" name="android_external_embunit" remote="spz" revision="linaro_android_4.4.4" />
   <project path="external/freetype" name="android_external_freetype" remote="spz" revision="linaro_android_4.4.4" />
@@ -159,19 +176,18 @@
   <project path="frameworks/compile/slang" name="android_frameworks_compile_slang" remote="spz" revision="linaro_android_4.4.4" />
   <project path="frameworks/opt/net/voip" name="android_frameworks_opt_net_voip" remote="spz" revision="linaro_android_4.4.4" />
   <project path="frameworks/wilhelm" name="android_frameworks_wilhelm" remote="spz" revision="linaro_android_4.4.4" />
-  <project path="bionic" name="android_bionic" remote="spz" revision="slimkat-new" />
-  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="spz" revision="ls-kitkat" />
-  <project path="dalvik" name="android_dalvik" remote="spz" revision="ls-kitkat"  />
-  <project path="external/clang" name="android_external_clang" remote="spz" revision="ls-kitkat" />
-  <project path="frameworks/ex" name="android_frameworks_ex" remote="spz" revision="ls-kitkat" />
-  <project path="frameworks/rs" name="android_frameworks_rs" remote="spz" revision="ls-kitkat" />
 
   <!-- Use LockClock instead of Dashclock -->
-  <project path="packages/apps/LockClock" name="android_packages_apps_LockClock" remote="spz" revision="slimkat-new" />
-  <project path="external/google" name="android_external_google" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/LockClock" name="android_packages_apps_LockClock" remote="skl" revision="slimkat-new" />
+  <project path="external/google" name="android_external_google" remote="skl" revision="slimkat-new" />
 
   <!-- Use Gallery2 with CAF stability fixes -->
-  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="spz" revision="slimkat-new" />
+  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="skl" revision="slimkat-new" />
+
+  <!-- AOSP GCC 4.8 androideabi toolchain -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" revision="master" groups="pdk,darwin,arm" />
+
+  <!-- ArchiDroid kernel toolchain -->
+  <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.9" name="ArchiDroid/Toolchain" remote="gh" revision="linaro-4.9" groups="pdk,darwin,arm" />
 
 </manifest>
-
