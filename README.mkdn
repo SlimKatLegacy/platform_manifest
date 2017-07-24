@@ -1,5 +1,5 @@
-Welcome to SlimRoms
-===================
+Welcome to SlimKat for HTC BRAVO
+================================
 
 
 Getting Started
@@ -18,14 +18,9 @@ the correct caf version for you.
 To initialize your local repository using the SlimKat trees, use this command:
 
 
-for google, exynos and non qcom devices:
+for HTC BRAVO (qcom device) which is using CodeAuroraForum trees:
 
-	repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4
-
-
-for qcom devices which are using CodeAuroraForum trees:
-
-	repo init -u git://github.com/SlimRoms/platform_manifest.git -b kk4.4-caf
+	repo init -u https://github.com/SlimKatLegacy/platform_manifest.git -b kk4.4-caf-bravo
 
 
 
@@ -39,30 +34,5 @@ Submitting Patches
 ------------------
 
 We're open source, and patches are always welcome!
-You can send patches by using these commands:
+You can send patches via pull request.
 
-    cd <workspace>
-    repo start <branch> SlimRoms/<project>
-    cd <project>
-    git add -A
-    git commit -a
-    cd <workspace>
-    repo upload SlimRoms/<project>
-
-Commit your patches in a single commit.
-
-Squash multiple commit using this command:
-
-	git rebase -i HEAD~<# of commits>
-
-If you are going to make extra additions, just repeat steps (Don't repo start again), but instead of
-
-	git commit -a
-
-use
-
-	git commit --amend
-
-Gerrit will recognize it as a new patchset.
-
-To view the status of your and others patches, visit [SlimRoms Code Review](http://gerrit.slimroms.net)
