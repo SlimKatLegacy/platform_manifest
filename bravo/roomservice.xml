@@ -102,7 +102,7 @@
   <project path="external/icu4c" name="android_external_icu4c" remote="skl" revision="slimkat-new" />
   <project path="system/media" name="android_system_media" remote="skl" revision="slimkat-new" />
   <project path="external/sepolicy" name="android_external_sepolicy" remote="skl" revision="slimkat-new" />
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="skl" revision="slimkat-new" />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="skl" revision="slimkat-new" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="skl" revision="slimkat-new" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="skl" revision="slimkat-new" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="skl" revision="slimkat-new" />
@@ -157,8 +157,8 @@
   <project path="dalvik" name="android_dalvik" remote="skl" revision="slimkat-new"  />
   <project path="bionic" name="android_bionic" remote="skl" revision="slimkat-new" />
   <project path="external/clang" name="android_external_clang" remote="skl" revision="slimkat-new" />
-  <project path="frameworks/ex" name="android_frameworks_ex" remote="skl" revision="slimkat-new" />
-  <project path="frameworks/rs" name="android_frameworks_rs" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/ex" name="frameworks_ex" remote="skl" revision="slimkat-new" />
+  <project path="frameworks/rs" name="frameworks_rs" remote="skl" revision="slimkat-new" />
   <project path="external/dnsmasq" name="android_external_dnsmasq" remote="skl" revision="slimkat-new" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="skl" revision="slimkat-new" />
   <project path="external/chromium" name="android_external_chromium" remote="skl" revision="slimkat-new" />
